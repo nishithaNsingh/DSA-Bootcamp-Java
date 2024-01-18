@@ -9,6 +9,14 @@ public class CLL {
         this.head = null;
         this.tail = null;
     }
+    private class Node {
+        int val;
+        Node next;
+
+        public Node(int val) {
+            this.val = val;
+        }
+    }
 
     public void insert(int val) {
         Node node = new Node(val);
@@ -65,12 +73,5 @@ public class CLL {
 
     }
 
-    private class Node {
-        int val;
-        Node next;
-
-        public Node(int val) {
-            this.val = val;
-        }
-    }
+  
 }

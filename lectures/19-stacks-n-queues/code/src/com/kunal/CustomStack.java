@@ -22,6 +22,7 @@ public class CustomStack {
         ptr++;
         data[ptr] = item;
         return true;
+       // return data[ptr++];
     }
 
     public int pop() throws StackException {

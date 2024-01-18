@@ -2,13 +2,25 @@ package com.kunal;
 
 public class LL {
 
-    private Node head;
-    private Node tail;
-    private int size;
+     Node head;
+     Node tail;
+     int size;
 
     public LL() {
         this.size = 0;
     }
+     class Node {
+         int value;
+         Node next;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+        public Node(int value, Node next) {
+            this.value = value;
+            this.next = next;
+        }
 
     public void insertFirst(int val) {
         Node node = new Node(val);
@@ -120,7 +132,7 @@ public class LL {
     public int deleteFirst() {
         int val = head.value;
         head = head.next;
-        if (head == null) {
+        if (head == null) { 
             tail = null;
         }
         size--;
@@ -136,18 +148,7 @@ public class LL {
         System.out.println("END");
     }
 
-    private class Node {
-        private int value;
-        private Node next;
-
-        public Node(int value) {
-            this.value = value;
-        }
-
-        public Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
+    
     }
 
     // https://leetcode.com/problems/remove-duplicates-from-sorted-list

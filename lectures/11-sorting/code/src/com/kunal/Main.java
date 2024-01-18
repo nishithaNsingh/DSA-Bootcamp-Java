@@ -1,12 +1,23 @@
 package com.kunal;
 
+import javax.sound.sampled.SourceDataLine;
+
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] arr = {5, 3, 4, 1, 2};
-        insertion(arr);
+        //int[] arr = {5, 3, 4, 1, 2 ,5};
+        Scanner in = new Scanner(Syatem.in);
+        System.out.println("Enter total number of elements in array");
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        System.out.println("enter the elements of the array");
+        for(int i=0;i<n;i++){
+            System.out.print("element " + (i+1)+": ");
+            arr[i] = in.nextInt();
+        }
+        selection(arr);
         System.out.println(Arrays.toString(arr));
     }
 
